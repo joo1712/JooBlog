@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="board">
+
+	<!--  리스트 Select  -->
+	<select id="selectBoardList"  resultType="Board">
+			SELECT IDX,
+			               TITLE,
+			               CONTENT,
+			               WRITER,
+			               INSERT_TIME
+			   FROM BOARD
+			 WHERE 1=1
+			<choose>
+			 		<when test='title != null amp;amp; title !=""'>
+			 				AND TITLE LIKE CONCAT('%' || #{title} || '%')  
+			 		</when>
+			 		<when test='content != null amp;amp; content != ""'>
+			 				AND CONTENT LIKE CONCAT('%' || #{content} || '%')
+			 		</when>
+			 		<when test='userId != null amp;amp; userId != ""'>
+			 				AND USER_ID LIKE CONCAT('%' || #{userId} || '%')
+			 		</when>
+			 </choose>
+	</select>
+	
+	<!--  등록  -->
+	<insert id="insertBoard" parameterType="hashMap">
+			INSERT INTO BOARD (
+														 IDX,
+							         					 TITLE,
+							         					 CONTENT,
+							         					 WRITER,
+							         					 VIEW_CNT,
+							         					 NOTICE_YN,
+							         					 SECRET_YN,
+							         					 DELETE_YN,
+							         					 INSERT_TIME,
+													)
+			         				VALUES (	
+				         								#{idx},
+				         								#{title},
+				         								#{content},
+				         								#{writer},
+				         								#{viewCnt},
+				         								#{noticeYn},
+				         								#{secretYn},
+				         								#{deleteYn},
+				         								NOW()
+			         							   )
+	</insert>
+	
+	<!--  수정  -->
+	<update id="updateBoard" parameterType="hashMap">
+			UPDATE BOARD
+			    	SET TITLE                       =#{title},
+			    	        CONTENT               =#{content},
+			    	        UPDATE_TIME       =NOW()
+			   WHERE 1=1 
+			        AND IDX = #{idx}
+	</update>
+	
+	<!--  조회수 Count  +1 -->
+	<update id="updateViewCnt" parameterType="hashMap">
+			UPDATE BOARD
+			        SET VIEW_CNT = #{viewCount} + 1
+			  WHERE 1=1 
+			       AND IDX = #{idx}
+	</update>
+	
+	<!-- 삭제여부 Y & N 변경 -->
+	<update id="deleteBoard" parameterType="hashMap">
+			UPDATE BOARD
+					SET DELETE_YN  = "Y"
+			WHERE 1=1
+			      AND IDX  = #{idx}
+	</update>
+	
+</mapper>

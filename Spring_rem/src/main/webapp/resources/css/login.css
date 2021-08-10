@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+#first {
+	position: relative;
+	top:50%;
+}
+
+#second{
+	display: none;
+}
