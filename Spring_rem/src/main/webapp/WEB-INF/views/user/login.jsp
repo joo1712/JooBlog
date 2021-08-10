@@ -30,14 +30,14 @@
 							<h1>Login</h1>
 						 </div>
 					</div>
-                   <form action="" method="post" name="login">
+                   <form action="/user/login.do" method="post" name="login">
                            <div class="form-group">
-                              <label for="exampleInputEmail1">Email address</label>
-                              <input type="email" name="email"  class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                              <label for="exampleInputEmail1">User ID</label>
+                              <input type="text"  name="userId"  class="form-control"  placeholder="Enter User ID">
                            </div>
                            <div class="form-group">
                               <label for="exampleInputEmail1">Password</label>
-                              <input type="password" name="password" id="password"  class="form-control" aria-describedby="emailHelp" placeholder="Enter Password">
+                              <input type="password" name="password" id="password"  class="form-control"  placeholder="Enter Password">
                            </div>
                            <div class="form-group">
                               <p class="text-center">By signing up you accept our <a href="#">Terms Of Use</a></p>
@@ -54,7 +54,7 @@
                               </p>
                            </div>
                            <div class="form-group">
-                              <p class="text-center">Don't have account? <a href="/views/user/signUp" id="signup">Sign up here</a></p>
+                              <p class="text-center">Don't have account? <a href="signUp.jsp" id="signup">Sign up here</a></p>
                            </div>
                         </form>
 				</div>

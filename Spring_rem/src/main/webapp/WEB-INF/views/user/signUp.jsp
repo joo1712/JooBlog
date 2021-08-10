@@ -16,7 +16,7 @@
 <script type="text/javascript"  src="resources/js/common.js" ></script>
 <!-- resources/css 연결 -->
 <link charset="UTF-8" href="resources/css/login.css" rel="stylesheet">
-<title>Login_Page</title>
+<title>Sign_Page</title>
 </head>
 <body>
 	<body>

@@ -12,20 +12,19 @@ public class Board {
 	/** 작성자   */
 	private String writer;
 	/** 조회수   */
-	private String view_cnt;
+	private String viewCnt;
 	/** 공지여부   */
-	private String notice_yn;
+	private String noticeYn;
 	/** 비밀여부   */
-	private String  secret_yn;
+	private String  secretYn;
 	/** 삭제여부   */
-	private String delete_yn;
+	private String deleteYn;
 	/** 등록일시   */
-	private Date insert_time;
+	private Date insertTime;
 	/** 수정일시   */
-	private Date update_time;
+	private Date updateTime;
 	/** 삭제일시   */
-	private Date delete_time;
-	
+	private Date deleteTime;
 	public String getIdx() {
 		return idx;
 	}
@@ -50,49 +49,47 @@ public class Board {
 	public void setWriter(String writer) {
 		this.writer = writer;
 	}
-	public String getView_cnt() {
-		return view_cnt;
+	public String getViewCnt() {
+		return viewCnt;
 	}
-	public void setView_cnt(String view_cnt) {
-		this.view_cnt = view_cnt;
+	public void setViewCnt(String viewCnt) {
+		this.viewCnt = viewCnt;
 	}
-	public String getNotice_yn() {
-		return notice_yn;
+	public String getNoticeYn() {
+		return noticeYn;
 	}
-	public void setNotice_yn(String notice_yn) {
-		this.notice_yn = notice_yn;
+	public void setNoticeYn(String noticeYn) {
+		this.noticeYn = noticeYn;
 	}
-	public String getSecret_yn() {
-		return secret_yn;
+	public String getSecretYn() {
+		return secretYn;
 	}
-	public void setSecret_yn(String secret_yn) {
-		this.secret_yn = secret_yn;
+	public void setSecretYn(String secretYn) {
+		this.secretYn = secretYn;
 	}
-	public String getDelete_yn() {
-		return delete_yn;
+	public String getDeleteYn() {
+		return deleteYn;
 	}
-	public void setDelete_yn(String delete_yn) {
-		this.delete_yn = delete_yn;
+	public void setDeleteYn(String deleteYn) {
+		this.deleteYn = deleteYn;
 	}
-	public Date getInsert_time() {
-		return insert_time;
+	public Date getInsertTime() {
+		return insertTime;
 	}
-	public void setInsert_time(Date insert_time) {
-		this.insert_time = insert_time;
+	public void setInsertTime(Date insertTime) {
+		this.insertTime = insertTime;
 	}
-	public Date getUpdate_time() {
-		return update_time;
+	public Date getUpdateTime() {
+		return updateTime;
 	}
-	public void setUpdate_time(Date update_time) {
-		this.update_time = update_time;
+	public void setUpdateTime(Date updateTime) {
+		this.updateTime = updateTime;
 	}
-	public Date getDelete_time() {
-		return delete_time;
+	public Date getDeleteTime() {
+		return deleteTime;
 	}
-	public void setDelete_time(Date delete_time) {
-		this.delete_time = delete_time;
+	public void setDeleteTime(Date deleteTime) {
+		this.deleteTime = deleteTime;
 	}
-	
-	
 	
 }
